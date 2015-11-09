@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project cid="0" version="1.2">
+<projectproperties>
+<projectproperty id="extfolder" module="IDK"  name="Extension Module Folder" value="ext"  tooltip="Folder where the IDE will find its new modules" />
+ <openeddiagram>n1</openeddiagram></projectproperties>
+<leafpackages>
+   <path>
+    <package id="Project"/>
+    <package id="n1"/>
+   </path>
+</leafpackages>
+<objects>
+<object id="Action0" type="ingenias.editor.entities.Action">
+<mapproperties>
+<key id="Name"></key>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="Norm0" type="ingenias.editor.entities.Norm">
+<mapproperties>
+<key id="Name"></key>
+<key id="DeonticType">Obliged</key>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="Norm1" type="ingenias.editor.entities.Norm">
+<mapproperties>
+<key id="Name"></key>
+<key id="DeonticType">Obliged</key>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="NormAnd0" type="ingenias.editor.entities.NormAnd">
+<mapproperties>
+<key id="Name"></key>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="RegulativeNormNet0" type="ingenias.editor.entities.RegulativeNormNet">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+</objects>
+<relationships>
+<relationship id="1" type="ingenias.editor.entities.RightNormNet">
+<object id="1" type="ingenias.editor.entities.RightNormNet">
+<mapproperties>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<role idEntity="NormAnd0" class="ingenias.editor.entities.NormAnd" roleName="RightNormNetsource" type="ingenias.editor.entities.RightNormNetsourceRole" dgcid="455596425">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role><role idEntity="Norm0" class="ingenias.editor.entities.Norm" roleName="RightNormNettarget" type="ingenias.editor.entities.RightNormNettargetRole" dgcid="1567172622">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role></relationship>
+<relationship id="0" type="ingenias.editor.entities.NormNets">
+<object id="0" type="ingenias.editor.entities.NormNets">
+<mapproperties>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<role idEntity="NormAnd0" class="ingenias.editor.entities.NormAnd" roleName="NormNetstarget" type="ingenias.editor.entities.NormNetstargetRole" dgcid="455596425">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role><role idEntity="RegulativeNormNet0" class="ingenias.editor.entities.RegulativeNormNet" roleName="NormNetssource" type="ingenias.editor.entities.NormNetssourceRole" dgcid="859738023">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role></relationship>
+<relationship id="2" type="ingenias.editor.entities.RightNormNet">
+<object id="2" type="ingenias.editor.entities.RightNormNet">
+<mapproperties>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<role idEntity="NormAnd0" class="ingenias.editor.entities.NormAnd" roleName="RightNormNetsource" type="ingenias.editor.entities.RightNormNetsourceRole" dgcid="455596425">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role><role idEntity="Norm1" class="ingenias.editor.entities.Norm" roleName="RightNormNettarget" type="ingenias.editor.entities.RightNormNettargetRole" dgcid="418409316">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role></relationship>
+</relationships>
+<models> 
+ <model id="n1" type="ingenias.editor.models.NormDiagramModelJGraph">
+<object id="n1" type="ingenias.editor.entities.NormDiagramDataEntity">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+  <path>
+    <package id="Project"/>
+   </path>
+<gxl>
+
+	<graph>
+			
+	<node id="1" nid="node0" type="RightNormNet">
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+		<attr name="bounds">
+			<rectangle x="74" y="150" width="89" height="17"></rectangle>		</attr>
+
+
+	<connected id="node4"><attr name="extraLabels">
+			<array>
+
+</array>
+</attr>
+
+
+
+
+
+
+	</connected>
+	<connected id="node1">
+
+
+
+
+
+
+	</connected>
+	</node>
+			
+	<node id="NormAnd0" nid="node4" type="NormAnd">
+		<attr name="bounds">
+			<rectangle x="120" y="59" width="90" height="77"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="2" nid="node6" type="RightNormNet">
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+		<attr name="bounds">
+			<rectangle x="190" y="162" width="84" height="15"></rectangle>		</attr>
+
+
+	<connected id="node4"><attr name="extraLabels">
+			<array>
+
+</array>
+</attr>
+
+
+
+
+
+
+	</connected>
+	<connected id="node5">
+
+
+
+
+
+
+	</connected>
+	</node>
+			
+	<node id="Norm1" nid="node5" type="Norm">
+		<attr name="bounds">
+			<rectangle x="255" y="198" width="43" height="36"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="0" nid="node2" type="NormNets">
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+		<attr name="bounds">
+			<rectangle x="298" y="58" width="68" height="17"></rectangle>		</attr>
+
+
+	<connected id="node3"><attr name="extraLabels">
+			<array>
+
+</array>
+</attr>
+
+
+
+
+
+
+	</connected>
+	<connected id="node4">
+
+
+
+
+
+
+	</connected>
+	</node>
+			
+	<node id="Norm0" nid="node1" type="Norm">
+		<attr name="bounds">
+			<rectangle x="55" y="193" width="46" height="38"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="RegulativeNormNet0" nid="node3" type="RegulativeNormNet">
+		<attr name="bounds">
+			<rectangle x="454" y="12" width="130" height="38"></rectangle>		</attr>
+
+
+	</node><parentship>
+</parentship>
+<entityconstraints>
+</entityconstraints>
+
+
+	</graph>
+
+
+	<layout>
+			
+	<node id="node0">
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+		<attr name="bounds">
+			<rectangle x="74" y="150" width="89" height="17"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node4">
+		<attr name="bounds">
+			<rectangle x="120" y="59" width="90" height="77"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node6">
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+		<attr name="bounds">
+			<rectangle x="190" y="162" width="84" height="15"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node5">
+		<attr name="bounds">
+			<rectangle x="255" y="198" width="43" height="36"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node2">
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+		<attr name="bounds">
+			<rectangle x="298" y="58" width="68" height="17"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node1">
+		<attr name="bounds">
+			<rectangle x="55" y="193" width="46" height="38"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node3">
+		<attr name="bounds">
+			<rectangle x="454" y="12" width="130" height="38"></rectangle>		</attr>
+
+
+	</node>
+	</layout>
+</gxl> </model>
+</models>
+</project>

@@ -1,0 +1,1174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meta-models examplefile="example/demo.xml">
+  <relationship id="Deadline">
+    <properties>
+      <preferredorder>
+        <order>id</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mDeadline.png</small-icon>
+      <normal-icon>images/Deadline.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##vbox Background="white" constraints="BorderLayout.CENTER"#
+##stereotype text="Deadline" HorizontalAlignment="CENTER"/#
+##/vbox#
+##/panel#
+</content>
+          <content id="LABEL">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##htmllabel id="Id"/#
+##/panel#
+</content>
+          <content id="NOICON">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+    <roles>
+      <role id="Deadlinesource" maxcard="1" mincard="1" type="source"/>
+      <role id="Deadlinetarget" maxcard="1" mincard="1" type="target"/>
+    </roles>
+  </relationship>
+  <role id="Deadlinesource">
+    <properties/>
+    <graphics>
+      <small-icon/>
+      <normal-icon/>
+    </graphics>
+    <validplayers>
+      <player id="Norm"/>
+    </validplayers>
+  </role>
+  <role id="Deadlinetarget">
+    <properties/>
+    <graphics>
+      <small-icon/>
+      <normal-icon/>
+    </graphics>
+    <validplayers>
+      <player id="Formula"/>
+    </validplayers>
+  </role>
+  <relationship id="Directive">
+    <properties>
+      <preferredorder>
+        <order>id</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mDirective.png</small-icon>
+      <normal-icon>images/Directive.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##vbox Background="white" constraints="BorderLayout.CENTER"#
+##stereotype text="Directive" HorizontalAlignment="CENTER"/#
+##/vbox#
+##/panel#
+</content>
+          <content id="LABEL">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##htmllabel id="Id"/#
+##/panel#
+</content>
+          <content id="NOICON">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+    <roles>
+      <role id="Directivesource" maxcard="1" mincard="1" type="source"/>
+      <role id="Directivetarget" maxcard="1" mincard="1" type="target"/>
+    </roles>
+  </relationship>
+  <role id="Directivesource">
+    <properties/>
+    <graphics>
+      <small-icon/>
+      <normal-icon/>
+    </graphics>
+    <validplayers>
+      <player id="Norm"/>
+    </validplayers>
+  </role>
+  <role id="Directivetarget">
+    <properties/>
+    <graphics>
+      <small-icon/>
+      <normal-icon/>
+    </graphics>
+    <validplayers>
+      <player id="RAP"/>
+    </validplayers>
+  </role>
+  <relationship id="Root">
+    <properties>
+      <preferredorder>
+        <order>id</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mRoot.png</small-icon>
+      <normal-icon>images/Root.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##vbox Background="white" constraints="BorderLayout.CENTER"#
+##stereotype text="Root" HorizontalAlignment="CENTER"/#
+##/vbox#
+##/panel#
+</content>
+          <content id="LABEL">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##htmllabel id="Id"/#
+##/panel#
+</content>
+          <content id="NOICON">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+    <roles>
+      <role id="Rootsource" maxcard="1" mincard="1" type="source"/>
+      <role id="Roottarget" maxcard="1" mincard="1" type="target"/>
+    </roles>
+  </relationship>
+  <role id="Rootsource">
+    <properties/>
+    <graphics>
+      <small-icon/>
+      <normal-icon/>
+    </graphics>
+    <validplayers>
+      <player id="RegulativeNormNet"/>
+    </validplayers>
+  </role>
+  <role id="Roottarget">
+    <properties/>
+    <graphics>
+      <small-icon/>
+      <normal-icon/>
+    </graphics>
+    <validplayers>
+      <player id="NormNet"/>
+    </validplayers>
+  </role>
+  <relationship id="Precondition">
+    <properties>
+      <preferredorder>
+        <order>id</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mPrecondition.png</small-icon>
+      <normal-icon>images/Precondition.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##vbox Background="white" constraints="BorderLayout.CENTER"#
+##stereotype text="Precondition" HorizontalAlignment="CENTER"/#
+##/vbox#
+##/panel#
+</content>
+          <content id="LABEL">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##htmllabel id="Id"/#
+##/panel#
+</content>
+          <content id="NOICON">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+    <roles>
+      <role id="Preconditionsource" maxcard="1" mincard="1" type="source"/>
+      <role id="Preconditiontarget" maxcard="1" mincard="1" type="target"/>
+    </roles>
+  </relationship>
+  <role id="Preconditionsource">
+    <properties/>
+    <graphics>
+      <small-icon/>
+      <normal-icon/>
+    </graphics>
+    <validplayers>
+      <player id="Norm"/>
+    </validplayers>
+  </role>
+  <role id="Preconditiontarget">
+    <properties/>
+    <graphics>
+      <small-icon/>
+      <normal-icon/>
+    </graphics>
+    <validplayers>
+      <player id="Formula"/>
+    </validplayers>
+  </role>
+  <relationship id="LeftFormula">
+    <properties>
+      <preferredorder>
+        <order>id</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mLeftFormula.png</small-icon>
+      <normal-icon>images/LeftFormula.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##vbox Background="white" constraints="BorderLayout.CENTER"#
+##stereotype text="LeftFormula" HorizontalAlignment="CENTER"/#
+##/vbox#
+##/panel#
+</content>
+          <content id="LABEL">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##htmllabel id="Id"/#
+##/panel#
+</content>
+          <content id="NOICON">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+    <roles>
+      <role id="LeftFormulasource" maxcard="1" mincard="1" type="source"/>
+      <role id="LeftFormulatarget" maxcard="1" mincard="1" type="target"/>
+    </roles>
+  </relationship>
+  <role id="LeftFormulasource">
+    <properties/>
+    <graphics>
+      <small-icon/>
+      <normal-icon/>
+    </graphics>
+    <validplayers>
+      <player id="RAPContainer"/>
+    </validplayers>
+  </role>
+  <role id="LeftFormulatarget">
+    <properties/>
+    <graphics>
+      <small-icon/>
+      <normal-icon/>
+    </graphics>
+    <validplayers>
+      <player id="Formula"/>
+    </validplayers>
+  </role>
+  <relationship id="RightFormula">
+    <properties>
+      <preferredorder>
+        <order>id</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mRightFormula.png</small-icon>
+      <normal-icon>images/RightFormula.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##vbox Background="white" constraints="BorderLayout.CENTER"#
+##stereotype text="RightFormula" HorizontalAlignment="CENTER"/#
+##/vbox#
+##/panel#
+</content>
+          <content id="LABEL">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##htmllabel id="Id"/#
+##/panel#
+</content>
+          <content id="NOICON">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+    <roles>
+      <role id="RightFormulasource" maxcard="1" mincard="1" type="source"/>
+      <role id="RightFormulatarget" maxcard="1" mincard="1" type="target"/>
+    </roles>
+  </relationship>
+  <role id="RightFormulasource">
+    <properties/>
+    <graphics>
+      <small-icon/>
+      <normal-icon/>
+    </graphics>
+    <validplayers>
+      <player id="RAPContainer"/>
+    </validplayers>
+  </role>
+  <role id="RightFormulatarget">
+    <properties/>
+    <graphics>
+      <small-icon/>
+      <normal-icon/>
+    </graphics>
+    <validplayers>
+      <player id="Formula"/>
+    </validplayers>
+  </role>
+  <relationship id="LeftNormNet">
+    <properties>
+      <preferredorder>
+        <order>id</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mLeftNormNet.png</small-icon>
+      <normal-icon>images/LeftNormNet.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##vbox Background="white" constraints="BorderLayout.CENTER"#
+##stereotype text="LeftNormNet" HorizontalAlignment="CENTER"/#
+##/vbox#
+##/panel#
+</content>
+          <content id="LABEL">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##htmllabel id="Id"/#
+##/panel#
+</content>
+          <content id="NOICON">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+    <roles>
+      <role id="LeftNormNetsource" maxcard="1" mincard="1" type="source"/>
+      <role id="LeftNormNettarget" maxcard="1" mincard="1" type="target"/>
+    </roles>
+  </relationship>
+  <role id="LeftNormNetsource">
+    <properties/>
+    <graphics>
+      <small-icon/>
+      <normal-icon/>
+    </graphics>
+    <validplayers>
+      <player id="NormContainer"/>
+    </validplayers>
+  </role>
+  <role id="LeftNormNettarget">
+    <properties/>
+    <graphics>
+      <small-icon/>
+      <normal-icon/>
+    </graphics>
+    <validplayers>
+      <player id="NormNet"/>
+    </validplayers>
+  </role>
+  <relationship id="RightNormNet">
+    <properties>
+      <preferredorder>
+        <order>id</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mRightNormNet.png</small-icon>
+      <normal-icon>images/RightNormNet.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##vbox Background="white" constraints="BorderLayout.CENTER"#
+##stereotype text="RightNormNet" HorizontalAlignment="CENTER"/#
+##/vbox#
+##/panel#
+</content>
+          <content id="LABEL">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##htmllabel id="Id"/#
+##/panel#
+</content>
+          <content id="NOICON">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+    <roles>
+      <role id="RightNormNetsource" maxcard="1" mincard="1" type="source"/>
+      <role id="RightNormNettarget" maxcard="1" mincard="1" type="target"/>
+    </roles>
+  </relationship>
+  <role id="RightNormNetsource">
+    <properties/>
+    <graphics>
+      <small-icon/>
+      <normal-icon/>
+    </graphics>
+    <validplayers>
+      <player id="NormContainer"/>
+    </validplayers>
+  </role>
+  <role id="RightNormNettarget">
+    <properties/>
+    <graphics>
+      <small-icon/>
+      <normal-icon/>
+    </graphics>
+    <validplayers>
+      <player id="NormNet"/>
+    </validplayers>
+  </role>
+  <object id="NormOE" inherits="NormContainer" instanciable="yes"
+    keyfield="id" package="" type="ingenias.editor.entities.MetaObject">
+    <description/>
+    <recommendation/>
+    <properties>
+      <property id="Description"
+        preferredwidget="ingenias.editor.widget.ScrolledTArea" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <preferredorder>
+        <order>id</order>
+        <order>Description</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mNormOE.png</small-icon>
+      <normal-icon>images/NormOE.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##panel constraints="BorderLayout.NORTH" Background="white" layout="GridBagLayout"#
+##htmllabel id="Id"#
+##gridbagconstraints id="gbc_1" insets="0,0,0,0" gridx="0" gridy="0" fill="GridBagLayout.BOTH" anchor="GridBagLayout.CENTER"/#
+##/htmllabel#
+##/panel#
+##label Foreground="blue" icon="images/NormOE.png" constraints="BorderLayout.CENTER" HorizontalAlignment="CENTER" /#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+  </object>
+  <object id="NormNet" instanciable="no" keyfield="id" package="">
+    <description/>
+    <recommendation/>
+    <properties>
+      <property id="Description"
+        preferredwidget="ingenias.editor.widget.ScrolledTArea" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <preferredorder>
+        <order>id</order>
+        <order>Description</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mNormNet.png</small-icon>
+      <normal-icon>images/NormNet.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white" border="LineBorder(Color.black,1)"#
+##vbox Background="white" constraints="BorderLayout.CENTER"#
+##panel Background="white"  HorizontalAlignment="CENTER" layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##stereotype text="NormNet" HorizontalAlignment="CENTER"/#
+##/panel#
+##panel Background="white"  HorizontalAlignment="CENTER"  layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##label id="Id"/#
+##/panel#
+##linepanel Background="white"/#
+##/vbox#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+  </object>
+  <metamodel icon="images/mNormDiagram.png" id="NormDiagram" name="">
+    <properties>
+      <property id="Description"
+        preferredwidget="ingenias.editor.widget.ScrolledTArea" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <preferredorder>
+        <order>id</order>
+        <order>Description</order>
+      </preferredorder>
+    </properties>
+    <code id="constructor"><![CDATA[ToolTipManager.sharedInstance().registerComponent(this);
+this.getModel().addGraphModelListener(new ChangeNARYEdgeLocation(this));
+this.getModel().addGraphModelListener(new ChangeEntityLocation(this));
+]]></code>
+    <objects>
+      <object id="RAPBefore"/>
+      <object id="RAPOr"/>
+      <object id="RAP"/>
+      <object id="RAPNot"/>
+      <object id="RAPAnd"/>
+      <object id="Action"/>
+      <object id="RAPBefore"/>
+      <object id="RAPOr"/>
+      <object id="RAPNot"/>
+      <object id="RAPAnd"/>
+      <object id="NormOE"/>
+      <object id="Norm"/>
+      <object id="NormAnd"/>
+      <object id="NormOr"/>
+      <object id="RegulativeNormNet"/>
+      <object id="Role"/>
+      <object id="NormOE"/>
+      <object id="NormAnd"/>
+      <object id="NormOr"/>
+    </objects>
+    <relationships>
+      <relationship id="Deadline"/>
+      <relationship id="Directive"/>
+      <relationship id="Root"/>
+      <relationship id="Precondition"/>
+      <relationship id="LeftFormula"/>
+      <relationship id="RightFormula"/>
+      <relationship id="LeftNormNet"/>
+      <relationship id="RightNormNet"/>
+    </relationships>
+  </metamodel>
+  <object id="Action" instanciable="yes" keyfield="id" package="">
+    <description/>
+    <recommendation/>
+    <properties>
+      <property id="Description"
+        preferredwidget="ingenias.editor.widget.ScrolledTArea" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <preferredorder>
+        <order>id</order>
+        <order>Description</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mAction.png</small-icon>
+      <normal-icon>images/Action.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white" border="LineBorder(Color.black,1)"#
+##vbox Background="white" constraints="BorderLayout.CENTER"#
+##panel Background="white"  HorizontalAlignment="CENTER" layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##stereotype text="Action" HorizontalAlignment="CENTER"/#
+##/panel#
+##panel Background="white"  HorizontalAlignment="CENTER"  layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##label id="Id"/#
+##/panel#
+##linepanel Background="white"/#
+##/vbox#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+  </object>
+  <object id="RAPOr" inherits="RAPContainer" instanciable="yes"
+    keyfield="id" package="" type="ingenias.editor.entities.MetaObject">
+    <description/>
+    <recommendation/>
+    <properties>
+      <property id="Description"
+        preferredwidget="ingenias.editor.widget.ScrolledTArea" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <preferredorder>
+        <order>id</order>
+        <order>Description</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mRAPOr.png</small-icon>
+      <normal-icon>images/mRAPOr.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##panel constraints="BorderLayout.NORTH" Background="white" layout="GridBagLayout"#
+##htmllabel id="Id"#
+##gridbagconstraints id="gbc_1" insets="0,0,0,0" gridx="0" gridy="0" fill="GridBagLayout.BOTH" anchor="GridBagLayout.CENTER"/#
+##/htmllabel#
+##/panel#
+##label Foreground="blue" icon="images/mRAPOr.png" constraints="BorderLayout.CENTER" HorizontalAlignment="CENTER" /#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+  </object>
+  <object id="Norm" inherits="NormNet" instanciable="yes" keyfield="id"
+    package="" type="ingenias.editor.entities.MetaObject">
+    <description/>
+    <recommendation/>
+    <properties>
+      <property id="Description"
+        preferredwidget="ingenias.editor.widget.ScrolledTArea" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <property id="DeonticType"
+        preferredwidget="ingenias.editor.widget.CustomJComboBox" type="java.lang.String">
+        <defaultvalues>
+          <value>Obliged</value>
+          <value>Forbidden</value>
+          <value>Permitted</value>
+        </defaultvalues>
+        <label lang="en">Description</label>
+      </property>
+      <preferredorder>
+        <order>id</order>
+        <order>Description</order>
+        <order>DeonticType</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mNorm.png</small-icon>
+      <normal-icon>images/Norm.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+          <property id="DeonticType"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white" border="LineBorder(Color.black,1)"#
+##vbox Background="white" constraints="BorderLayout.CENTER"#
+##panel Background="white"  HorizontalAlignment="CENTER" layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##stereotype text="Norm" HorizontalAlignment="CENTER"/#
+##/panel#
+##panel Background="white"  HorizontalAlignment="CENTER"  layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##label id="Id"/#
+##/panel#
+##linepanel Background="white"/#
+##/vbox#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+  </object>
+  <object id="NormAnd" inherits="NormContainer" instanciable="yes"
+    keyfield="id" package="" type="ingenias.editor.entities.MetaObject">
+    <description/>
+    <recommendation/>
+    <properties>
+      <property id="Description"
+        preferredwidget="ingenias.editor.widget.ScrolledTArea" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <preferredorder>
+        <order>id</order>
+        <order>Description</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mNormAnd.png</small-icon>
+      <normal-icon>images/NormAnd.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##panel constraints="BorderLayout.NORTH" Background="white" layout="GridBagLayout"#
+##htmllabel id="Id"#
+##gridbagconstraints id="gbc_1" insets="0,0,0,0" gridx="0" gridy="0" fill="GridBagLayout.BOTH" anchor="GridBagLayout.CENTER"/#
+##/htmllabel#
+##/panel#
+##label Foreground="blue" icon="images/NormAnd.png" constraints="BorderLayout.CENTER" HorizontalAlignment="CENTER" /#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+  </object>
+  <object id="RAPAnd" inherits="RAPContainer" instanciable="yes"
+    keyfield="id" package="" type="ingenias.editor.entities.MetaObject">
+    <description/>
+    <recommendation/>
+    <properties>
+      <property id="Description"
+        preferredwidget="ingenias.editor.widget.ScrolledTArea" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <preferredorder>
+        <order>id</order>
+        <order>Description</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mRAPAND.png</small-icon>
+      <normal-icon>images/RAPAND.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##panel constraints="BorderLayout.NORTH" Background="white" layout="GridBagLayout"#
+##htmllabel id="Id"#
+##gridbagconstraints id="gbc_1" insets="0,0,0,0" gridx="0" gridy="0" fill="GridBagLayout.BOTH" anchor="GridBagLayout.CENTER"/#
+##/htmllabel#
+##/panel#
+##label Foreground="blue" icon="images/RAPAND.png" constraints="BorderLayout.CENTER" HorizontalAlignment="CENTER" /#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+  </object>
+  <object id="Formula" instanciable="no" keyfield="id" package="">
+    <description/>
+    <recommendation/>
+    <properties>
+      <property id="Description"
+        preferredwidget="ingenias.editor.widget.ScrolledTArea" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <preferredorder>
+        <order>id</order>
+        <order>Description</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mFormula.png</small-icon>
+      <normal-icon>images/Formula.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white" border="LineBorder(Color.black,1)"#
+##vbox Background="white" constraints="BorderLayout.CENTER"#
+##panel Background="white"  HorizontalAlignment="CENTER" layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##stereotype text="Formula" HorizontalAlignment="CENTER"/#
+##/panel#
+##panel Background="white"  HorizontalAlignment="CENTER"  layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##label id="Id"/#
+##/panel#
+##linepanel Background="white"/#
+##/vbox#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+  </object>
+  <object id="RAPContainer" inherits="Formula" instanciable="no"
+    keyfield="id" package="" type="ingenias.editor.entities.MetaObject">
+    <description/>
+    <recommendation/>
+    <properties>
+      <property id="Description"
+        preferredwidget="ingenias.editor.widget.ScrolledTArea" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <preferredorder>
+        <order>id</order>
+        <order>Description</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mRAPContainer.png</small-icon>
+      <normal-icon>images/RAPContainer.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white" border="LineBorder(Color.black,1)"#
+##vbox Background="white" constraints="BorderLayout.CENTER"#
+##panel Background="white"  HorizontalAlignment="CENTER" layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##stereotype text="RAPContainer" HorizontalAlignment="CENTER"/#
+##/panel#
+##panel Background="white"  HorizontalAlignment="CENTER"  layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##label id="Id"/#
+##/panel#
+##linepanel Background="white"/#
+##/vbox#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+  </object>
+  <object id="RegulativeNormNet" instanciable="yes" keyfield="id" package="">
+    <description/>
+    <recommendation/>
+    <properties>
+      <property id="Description"
+        preferredwidget="ingenias.editor.widget.ScrolledTArea" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <preferredorder>
+        <order>id</order>
+        <order>Description</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mRegulativeNormNet.png</small-icon>
+      <normal-icon>images/RegulativeNormNet.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white" border="LineBorder(Color.black,1)"#
+##vbox Background="white" constraints="BorderLayout.CENTER"#
+##panel Background="white"  HorizontalAlignment="CENTER" layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##stereotype text="RegulativeNormNet" HorizontalAlignment="CENTER"/#
+##/panel#
+##panel Background="white"  HorizontalAlignment="CENTER"  layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##label id="Id"/#
+##/panel#
+##linepanel Background="white"/#
+##/vbox#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+  </object>
+  <object id="RAP" inherits="Formula" instanciable="yes" keyfield="id"
+    package="" type="ingenias.editor.entities.MetaObject">
+    <description/>
+    <recommendation/>
+    <properties>
+      <property id="Description"
+        preferredwidget="ingenias.editor.widget.ScrolledTArea" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <property id="Action" iscollection="no" ismetaclassinstance="yes"
+        preferredwidget="ingenias.editor.widget.CustomJTextField" type="Action">
+        <label lang="en">Description</label>
+      </property>
+      <property id="Role" iscollection="" ismetaclassinstance="yes"
+        preferredwidget="ingenias.editor.widget.CustomJTextField" type="Role">
+        <label lang="en">Description</label>
+      </property>
+      <preferredorder>
+        <order>id</order>
+        <order>Description</order>
+        <order>Action</order>
+        <order>Role</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mRAP.png</small-icon>
+      <normal-icon>images/RAP.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+          <property id="Action"/>
+          <property id="Role"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white" border="LineBorder(Color.black,1)"#
+##vbox Background="white" constraints="BorderLayout.CENTER"#
+##panel Background="white"  HorizontalAlignment="CENTER" layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##stereotype text="RAP" HorizontalAlignment="CENTER"/#
+##/panel#
+##panel Background="white"  HorizontalAlignment="CENTER"  layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##label id="Id"/#
+##/panel#
+##linepanel Background="white"/#
+##/vbox#
+##/panel#
+</content>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white" border="LineBorder(Color.black,1)"#
+##vbox Background="white" constraints="BorderLayout.CENTER" #
+##panel Background="white"  HorizontalAlignment="CENTER" layout="FlowLayout(FlowLayout.CENTER,0,0)" #
+##stereotype text="RAP" HorizontalAlignment="CENTER" /#
+##/panel #
+##panel Background="white"  HorizontalAlignment="CENTER"  layout="FlowLayout(FlowLayout.CENTER,0,0)" #
+##label id="Id"/#
+##/panel#
+##linepanel Background="white"/#
+##panel Background="white"  HorizontalAlignment="CENTER"  layout="FlowLayout(FlowLayout.LEFT,0,0)" #
+##label text="Role:"/#
+##label id="Role"/#
+##/panel#
+##panel Background="white"  HorizontalAlignment="CENTER"  layout="FlowLayout(FlowLayout.LEFT,0,0)" #
+##label text="Action:"/#
+##label id="Action"/#
+##/panel#
+##linepanel Background="white" /#
+##/vbox#
+##/panel#	
+</content>
+        </views>
+      </layout>
+    </graphics>
+  </object>
+  <object id="RAPNot" inherits="RAPContainer" instanciable="yes"
+    keyfield="id" package="" type="ingenias.editor.entities.MetaObject">
+    <description/>
+    <recommendation/>
+    <properties>
+      <property id="Description"
+        preferredwidget="ingenias.editor.widget.ScrolledTArea" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <preferredorder>
+        <order>id</order>
+        <order>Description</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mRAPNot.png</small-icon>
+      <normal-icon>images/mRAPNot.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##panel constraints="BorderLayout.NORTH" Background="white" layout="GridBagLayout"#
+##htmllabel id="Id"#
+##gridbagconstraints id="gbc_1" insets="0,0,0,0" gridx="0" gridy="0" fill="GridBagLayout.BOTH" anchor="GridBagLayout.CENTER"/#
+##/htmllabel#
+##/panel#
+##label Foreground="blue" icon="images/mRAPNot.png" constraints="BorderLayout.CENTER" HorizontalAlignment="CENTER" /#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+  </object>
+  <object id="NormContainer" inherits="NormNet" instanciable="no"
+    keyfield="id" package="" type="ingenias.editor.entities.MetaObject">
+    <description/>
+    <recommendation/>
+    <properties>
+      <property id="Description"
+        preferredwidget="ingenias.editor.widget.ScrolledTArea" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <preferredorder>
+        <order>id</order>
+        <order>Description</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mNormContainer.png</small-icon>
+      <normal-icon>images/NormContainer.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white" border="LineBorder(Color.black,1)"#
+##vbox Background="white" constraints="BorderLayout.CENTER"#
+##panel Background="white"  HorizontalAlignment="CENTER" layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##stereotype text="NormContainer" HorizontalAlignment="CENTER"/#
+##/panel#
+##panel Background="white"  HorizontalAlignment="CENTER"  layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##label id="Id"/#
+##/panel#
+##linepanel Background="white"/#
+##/vbox#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+  </object>
+  <object id="NormOr" inherits="NormContainer" instanciable="yes"
+    keyfield="id" package="" type="ingenias.editor.entities.MetaObject">
+    <description/>
+    <recommendation/>
+    <properties>
+      <property id="Description"
+        preferredwidget="ingenias.editor.widget.ScrolledTArea" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <preferredorder>
+        <order>id</order>
+        <order>Description</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mNormOr.png</small-icon>
+      <normal-icon>images/NormOr.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##panel constraints="BorderLayout.NORTH" Background="white" layout="GridBagLayout"#
+##htmllabel id="Id"#
+##gridbagconstraints id="gbc_1" insets="0,0,0,0" gridx="0" gridy="0" fill="GridBagLayout.BOTH" anchor="GridBagLayout.CENTER"/#
+##/htmllabel#
+##/panel#
+##label Foreground="blue" icon="images/NormOr.png" constraints="BorderLayout.CENTER" HorizontalAlignment="CENTER" /#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+  </object>
+  <object id="RAPBefore" inherits="RAPContainer" instanciable="yes"
+    keyfield="id" package="" type="ingenias.editor.entities.MetaObject">
+    <description/>
+    <recommendation/>
+    <properties>
+      <property id="Description"
+        preferredwidget="ingenias.editor.widget.ScrolledTArea" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <preferredorder>
+        <order>id</order>
+        <order>Description</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mRAPBefore.png</small-icon>
+      <normal-icon>images/mRAPBefore.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white"#
+##panel constraints="BorderLayout.NORTH" Background="white" layout="GridBagLayout"#
+##htmllabel id="Id"#
+##gridbagconstraints id="gbc_1" insets="0,0,0,0" gridx="0" gridy="0" fill="GridBagLayout.BOTH" anchor="GridBagLayout.CENTER"/#
+##/htmllabel#
+##/panel#
+##label Foreground="blue" icon="images/mRAPBefore.png" constraints="BorderLayout.CENTER" HorizontalAlignment="CENTER" /#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+  </object>
+  <object id="Role" instanciable="yes" keyfield="id" package="">
+    <description/>
+    <recommendation/>
+    <properties>
+      <property id="Description"
+        preferredwidget="ingenias.editor.widget.ScrolledTArea" type="java.lang.String">
+        <defaultvalues/>
+        <label lang="en">Description</label>
+      </property>
+      <preferredorder>
+        <order>id</order>
+        <order>Description</order>
+      </preferredorder>
+    </properties>
+    <graphics>
+      <small-icon>images/mRole.png</small-icon>
+      <normal-icon>images/Role.png</normal-icon>
+      <layout>
+        <properties>
+          <property id="id"/>
+        </properties>
+        <views>
+          <content id="INGENIAS">
+##panel layout="BorderLayout(0,0)"  Background="white" border="LineBorder(Color.black,1)"#
+##vbox Background="white" constraints="BorderLayout.CENTER"#
+##panel Background="white"  HorizontalAlignment="CENTER" layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##stereotype text="Role" HorizontalAlignment="CENTER"/#
+##/panel#
+##panel Background="white"  HorizontalAlignment="CENTER"  layout="FlowLayout(FlowLayout.CENTER,0,0)"#
+##label id="Id"/#
+##/panel#
+##linepanel Background="white"/#
+##/vbox#
+##/panel#
+</content>
+        </views>
+      </layout>
+    </graphics>
+  </object>
+</meta-models>

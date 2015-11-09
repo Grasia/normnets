@@ -1,0 +1,1320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project cid="8" version="1.2">
+<projectproperties>
+<projectproperty id="extfolder" module="IDK"  name="Extension Module Folder" value="ext"  tooltip="Folder where the IDE will find its new modules" />
+ <openeddiagram>article183.6 spec</openeddiagram> <openeddiagram>EU Entry process  regulation</openeddiagram></projectproperties>
+<leafpackages>
+   <path>
+    <package id="Project"/>
+    <package id="article183.6 spec"/>
+   </path>
+   <path>
+    <package id="Project"/>
+    <package id="EU Entry process  regulation"/>
+   </path>
+</leafpackages>
+<objects>
+<object id="RegisterENS" type="ingenias.editor.entities.Action">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="ReceiveENS" type="ingenias.editor.entities.Action">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="Passed1dayfromENSReception" type="ingenias.editor.entities.Action">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="Dosomething" type="ingenias.editor.entities.Action">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="Dothisotherthing" type="ingenias.editor.entities.Action">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="RAP0" type="ingenias.editor.entities.RAP">
+<objectproperty id="Action">
+<object id="RegisterENS" type="ingenias.editor.entities.Action">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+</objectproperty>
+<objectproperty id="Role">
+<object id="CustomAuthorities" type="ingenias.editor.entities.Role">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+</objectproperty>
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="RAP1" type="ingenias.editor.entities.RAP">
+<objectproperty id="Action">
+<object id="ReceiveENS" type="ingenias.editor.entities.Action">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+</objectproperty>
+<objectproperty id="Role">
+<object id="CustomAuthorities" type="ingenias.editor.entities.Role">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+</objectproperty>
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="RAP2" type="ingenias.editor.entities.RAP">
+<objectproperty id="Action">
+<object id="Passed1dayfromENSReception" type="ingenias.editor.entities.Action">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+</objectproperty>
+<objectproperty id="Role">
+<object id="SystemTimer" type="ingenias.editor.entities.Role">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+</objectproperty>
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="RAP3" type="ingenias.editor.entities.RAP">
+<objectproperty id="Action">
+<object id="RegisterENS" type="ingenias.editor.entities.Action">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+</objectproperty>
+<objectproperty id="Role">
+<object id="CustomAuthorities" type="ingenias.editor.entities.Role">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+</objectproperty>
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="RAP4" type="ingenias.editor.entities.RAP">
+<objectproperty id="Action">
+<object id="ReceiveENS" type="ingenias.editor.entities.Action">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+</objectproperty>
+<objectproperty id="Role">
+<object id="CustomAuthorities" type="ingenias.editor.entities.Role">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+</objectproperty>
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="RAP5" type="ingenias.editor.entities.RAP">
+<objectproperty id="Action">
+<object id="RegisterENS" type="ingenias.editor.entities.Action">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+</objectproperty>
+<objectproperty id="Role">
+<object id="CustomAuthorities" type="ingenias.editor.entities.Role">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+</objectproperty>
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="Article1836" type="ingenias.editor.entities.Norm">
+<mapproperties>
+<key id="DeonticType">Forbidden</key>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="Norm0" type="ingenias.editor.entities.Norm">
+<mapproperties>
+<key id="DeonticType">Obliged</key>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="NormAnd0" type="ingenias.editor.entities.NormAnd">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="RegulativeNormNet0" type="ingenias.editor.entities.RegulativeNormNet">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="CustomAuthorities" type="ingenias.editor.entities.Role">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<object id="SystemTimer" type="ingenias.editor.entities.Role">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+</objects>
+<relationships>
+<relationship id="6" type="ingenias.editor.entities.Precondition">
+<object id="6" type="ingenias.editor.entities.Precondition">
+<mapproperties>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<role idEntity="Norm0" class="ingenias.editor.entities.Norm" roleName="Preconditionsource" type="ingenias.editor.entities.PreconditionsourceRole" dgcid="1018333443">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role><role idEntity="RAP3" class="ingenias.editor.entities.RAP" roleName="Preconditiontarget" type="ingenias.editor.entities.PreconditiontargetRole" dgcid="2005961018">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role></relationship>
+<relationship id="7" type="ingenias.editor.entities.Directive">
+<object id="7" type="ingenias.editor.entities.Directive">
+<mapproperties>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<role idEntity="Norm0" class="ingenias.editor.entities.Norm" roleName="Directivesource" type="ingenias.editor.entities.DirectivesourceRole" dgcid="1018333443">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role><role idEntity="RAP4" class="ingenias.editor.entities.RAP" roleName="Directivetarget" type="ingenias.editor.entities.DirectivetargetRole" dgcid="226390817">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role></relationship>
+<relationship id="4" type="ingenias.editor.entities.LeftNormNet">
+<object id="4" type="ingenias.editor.entities.LeftNormNet">
+<mapproperties>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<role idEntity="Article1836" class="ingenias.editor.entities.Norm" roleName="LeftNormNettarget" type="ingenias.editor.entities.LeftNormNettargetRole" dgcid="1952150056">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role><role idEntity="NormAnd0" class="ingenias.editor.entities.NormAnd" roleName="LeftNormNetsource" type="ingenias.editor.entities.LeftNormNetsourceRole" dgcid="1789621862">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role></relationship>
+<relationship id="8" type="ingenias.editor.entities.Deadline">
+<object id="8" type="ingenias.editor.entities.Deadline">
+<mapproperties>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<role idEntity="Norm0" class="ingenias.editor.entities.Norm" roleName="Deadlinesource" type="ingenias.editor.entities.DeadlinesourceRole" dgcid="1018333443">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role><role idEntity="RAP5" class="ingenias.editor.entities.RAP" roleName="Deadlinetarget" type="ingenias.editor.entities.DeadlinetargetRole" dgcid="336110531">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role></relationship>
+<relationship id="0" type="ingenias.editor.entities.Root">
+<object id="0" type="ingenias.editor.entities.Root">
+<mapproperties>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<role idEntity="RegulativeNormNet0" class="ingenias.editor.entities.RegulativeNormNet" roleName="Rootsource" type="ingenias.editor.entities.RootsourceRole" dgcid="263497410">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role><role idEntity="NormAnd0" class="ingenias.editor.entities.NormAnd" roleName="Roottarget" type="ingenias.editor.entities.RoottargetRole" dgcid="1789621862">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role></relationship>
+<relationship id="5" type="ingenias.editor.entities.RightNormNet">
+<object id="5" type="ingenias.editor.entities.RightNormNet">
+<mapproperties>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<role idEntity="Norm0" class="ingenias.editor.entities.Norm" roleName="RightNormNettarget" type="ingenias.editor.entities.RightNormNettargetRole" dgcid="1018333443">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role><role idEntity="NormAnd0" class="ingenias.editor.entities.NormAnd" roleName="RightNormNetsource" type="ingenias.editor.entities.RightNormNetsourceRole" dgcid="1789621862">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role></relationship>
+<relationship id="2" type="ingenias.editor.entities.Precondition">
+<object id="2" type="ingenias.editor.entities.Precondition">
+<mapproperties>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<role idEntity="Article1836" class="ingenias.editor.entities.Norm" roleName="Preconditionsource" type="ingenias.editor.entities.PreconditionsourceRole" dgcid="1399958988">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role><role idEntity="RAP1" class="ingenias.editor.entities.RAP" roleName="Preconditiontarget" type="ingenias.editor.entities.PreconditiontargetRole" dgcid="1237129112">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role></relationship>
+<relationship id="3" type="ingenias.editor.entities.Deadline">
+<object id="3" type="ingenias.editor.entities.Deadline">
+<mapproperties>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<role idEntity="Article1836" class="ingenias.editor.entities.Norm" roleName="Deadlinesource" type="ingenias.editor.entities.DeadlinesourceRole" dgcid="1399958988">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role><role idEntity="RAP2" class="ingenias.editor.entities.RAP" roleName="Deadlinetarget" type="ingenias.editor.entities.DeadlinetargetRole" dgcid="1131930386">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role></relationship>
+<relationship id="1" type="ingenias.editor.entities.Directive">
+<object id="1" type="ingenias.editor.entities.Directive">
+<mapproperties>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<role idEntity="Article1836" class="ingenias.editor.entities.Norm" roleName="Directivesource" type="ingenias.editor.entities.DirectivesourceRole" dgcid="1399958988">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role><role idEntity="RAP0" class="ingenias.editor.entities.RAP" roleName="Directivetarget" type="ingenias.editor.entities.DirectivetargetRole" dgcid="1757736319">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role></relationship>
+<relationship id="2" type="ingenias.editor.entities.Precondition">
+<object id="2" type="ingenias.editor.entities.Precondition">
+<mapproperties>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<role idEntity="Article1836" class="ingenias.editor.entities.Norm" roleName="Preconditionsource" type="ingenias.editor.entities.PreconditionsourceRole" dgcid="1399958988">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role><role idEntity="RAP1" class="ingenias.editor.entities.RAP" roleName="Preconditiontarget" type="ingenias.editor.entities.PreconditiontargetRole" dgcid="1237129112">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role></relationship>
+<relationship id="1" type="ingenias.editor.entities.Directive">
+<object id="1" type="ingenias.editor.entities.Directive">
+<mapproperties>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<role idEntity="Article1836" class="ingenias.editor.entities.Norm" roleName="Directivesource" type="ingenias.editor.entities.DirectivesourceRole" dgcid="1399958988">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role><role idEntity="RAP0" class="ingenias.editor.entities.RAP" roleName="Directivetarget" type="ingenias.editor.entities.DirectivetargetRole" dgcid="1757736319">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role></relationship>
+<relationship id="3" type="ingenias.editor.entities.Deadline">
+<object id="3" type="ingenias.editor.entities.Deadline">
+<mapproperties>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+<role idEntity="Article1836" class="ingenias.editor.entities.Norm" roleName="Deadlinesource" type="ingenias.editor.entities.DeadlinesourceRole" dgcid="1399958988">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role><role idEntity="RAP2" class="ingenias.editor.entities.RAP" roleName="Deadlinetarget" type="ingenias.editor.entities.DeadlinetargetRole" dgcid="1131930386">
+<mapproperties>
+<key id="attributeToShow">0</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</role></relationship>
+</relationships>
+<models> 
+ <model id="article183.6 spec" type="ingenias.editor.models.NormDiagramModelJGraph">
+<object id="article183.6 spec" type="ingenias.editor.entities.NormDiagramDataEntity">
+<mapproperties>
+<key id="Description">Article 183.6 Entry summary declarations shall be registered [register ENS ]
+by the customs authorities immediately [pass 1day] upon their receipt [re-
+ceive ENS ].</key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+  <path>
+    <package id="Project"/>
+   </path>
+<gxl>
+
+	<graph>
+			
+	<node id="RAP2" nid="node18" type="RAP">
+		<attr name="bounds">
+			<rectangle x="382" y="250" width="237" height="70"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="RAP4" nid="node5" type="RAP">
+		<attr name="bounds">
+			<rectangle x="841" y="160" width="148" height="70"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="NormAnd0" nid="node8" type="NormAnd">
+		<attr name="bounds">
+			<rectangle x="362" y="36" width="90" height="77"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="RAP5" nid="node4" type="RAP">
+		<attr name="bounds">
+			<rectangle x="823" y="246" width="148" height="70"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="RAP0" nid="node13" type="RAP">
+		<attr name="bounds">
+			<rectangle x="47" y="65" width="148" height="70"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="RegulativeNormNet0" nid="node9" type="RegulativeNormNet">
+		<attr name="bounds">
+			<rectangle x="38" y="0" width="130" height="36"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="6" nid="node0" type="Precondition">
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+		<attr name="bounds">
+			<rectangle x="667" y="127" width="73" height="15"></rectangle>		</attr>
+
+
+	<connected id="node10"><attr name="extraLabels">
+			<array>
+
+</array>
+</attr>
+
+
+
+
+
+
+	</connected>
+	<connected id="node6">
+
+
+
+
+
+
+	</connected>
+	</node>
+			
+	<node id="RAP3" nid="node6" type="RAP">
+		<attr name="bounds">
+			<rectangle x="792" y="30" width="148" height="70"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="8" nid="node3" type="Deadline">
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+		<attr name="bounds">
+			<rectangle x="691" y="215" width="55" height="15"></rectangle>		</attr>
+
+
+	<connected id="node10"><attr name="extraLabels">
+			<array>
+
+</array>
+</attr>
+
+
+
+
+
+
+	</connected>
+	<connected id="node4">
+
+
+
+
+
+
+	</connected>
+	</node>
+			
+	<node id="5" nid="node11" type="RightNormNet">
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+		<attr name="bounds">
+			<rectangle x="469" y="127" width="84" height="15"></rectangle>		</attr>
+
+
+	<connected id="node8"><attr name="extraLabels">
+			<array>
+
+</array>
+</attr>
+
+
+
+
+
+
+	</connected>
+	<connected id="node10">
+
+
+
+
+
+
+	</connected>
+	</node>
+			
+	<node id="Article1836" nid="node12" type="Norm">
+		<attr name="bounds">
+			<rectangle x="282" y="163" width="73" height="36"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="1" nid="node17" type="Directive">
+		<attr name="bounds">
+			<rectangle x="210" y="140" width="56" height="15"></rectangle>		</attr>
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+
+
+	<connected id="node12">
+
+
+
+
+		<attr name="labelposition">
+			<point x="500.0" y="-20.0"></point>
+		</attr>
+
+
+
+
+		<attr name="points">
+			<list>
+		<attr name="points0">
+			<point x="321.0" y="65.5"></point>
+		</attr>
+		<attr name="points1">
+			<point x="143.5" y="64.0"></point>
+		</attr>
+
+</list>
+		</attr>
+
+
+
+	</connected>
+	<connected id="node13">		<attr name="labelposition">
+			<point x="500.0" y="-20.0"></point>
+		</attr>
+
+
+
+
+
+
+
+		<attr name="points">
+			<list>
+		<attr name="points0">
+			<point x="321.0" y="65.5"></point>
+		</attr>
+		<attr name="points1">
+			<point x="534.0" y="67.0"></point>
+		</attr>
+
+</list>
+		</attr>
+
+
+
+
+
+
+	</connected>
+	</node>
+			
+	<node id="4" nid="node2" type="LeftNormNet">
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+		<attr name="bounds">
+			<rectangle x="317" y="131" width="79" height="15"></rectangle>		</attr>
+
+
+	<connected id="node8"><attr name="extraLabels">
+			<array>
+
+</array>
+</attr>
+
+
+
+
+
+
+	</connected>
+	<connected id="node12">
+
+
+
+
+
+
+	</connected>
+	</node>
+			
+	<node id="7" nid="node1" type="Directive">
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+		<attr name="bounds">
+			<rectangle x="699" y="179" width="56" height="15"></rectangle>		</attr>
+
+
+	<connected id="node10"><attr name="extraLabels">
+			<array>
+
+</array>
+</attr>
+
+
+
+
+
+
+	</connected>
+	<connected id="node5">
+
+
+
+
+
+
+	</connected>
+	</node>
+			
+	<node id="3" nid="node16" type="Deadline">
+		<attr name="bounds">
+			<rectangle x="374" y="219" width="55" height="15"></rectangle>		</attr>
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+
+
+	<connected id="node12">
+
+
+
+
+		<attr name="labelposition">
+			<point x="500.0" y="-20.0"></point>
+		</attr>
+
+
+
+
+		<attr name="points">
+			<list>
+		<attr name="points0">
+			<point x="281.5" y="116.5"></point>
+		</attr>
+		<attr name="points1">
+			<point x="143.5" y="64.0"></point>
+		</attr>
+
+</list>
+		</attr>
+
+
+
+	</connected>
+	<connected id="node18">		<attr name="labelposition">
+			<point x="500.0" y="-20.0"></point>
+		</attr>
+
+
+
+
+
+
+
+		<attr name="points">
+			<list>
+		<attr name="points0">
+			<point x="281.5" y="116.5"></point>
+		</attr>
+		<attr name="points1">
+			<point x="502.5" y="200.0"></point>
+		</attr>
+
+</list>
+		</attr>
+
+
+
+
+
+
+	</connected>
+	</node>
+			
+	<node id="2" nid="node14" type="Precondition">
+		<attr name="bounds">
+			<rectangle x="207" y="214" width="73" height="15"></rectangle>		</attr>
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+
+
+	<connected id="node12">
+
+
+
+
+		<attr name="labelposition">
+			<point x="500.0" y="-20.0"></point>
+		</attr>
+
+
+
+
+		<attr name="points">
+			<list>
+		<attr name="points0">
+			<point x="141.5" y="118.5"></point>
+		</attr>
+		<attr name="points1">
+			<point x="143.5" y="64.0"></point>
+		</attr>
+
+</list>
+		</attr>
+
+
+
+	</connected>
+	<connected id="node15">		<attr name="labelposition">
+			<point x="500.0" y="-20.0"></point>
+		</attr>
+
+
+
+
+
+
+
+		<attr name="points">
+			<list>
+		<attr name="points0">
+			<point x="141.5" y="118.5"></point>
+		</attr>
+		<attr name="points1">
+			<point x="139.0" y="189.0"></point>
+		</attr>
+
+</list>
+		</attr>
+
+
+
+
+
+
+	</connected>
+	</node>
+			
+	<node id="0" nid="node7" type="Root">
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+		<attr name="bounds">
+			<rectangle x="247" y="41" width="36" height="15"></rectangle>		</attr>
+
+
+	<connected id="node9"><attr name="extraLabels">
+			<array>
+
+</array>
+</attr>
+
+
+
+
+
+
+	</connected>
+	<connected id="node8">
+
+
+
+
+
+
+	</connected>
+	</node>
+			
+	<node id="RAP1" nid="node15" type="RAP">
+		<attr name="bounds">
+			<rectangle x="57" y="244" width="148" height="70"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="Norm0" nid="node10" type="Norm">
+		<attr name="bounds">
+			<rectangle x="571" y="163" width="43" height="36"></rectangle>		</attr>
+
+
+	</node><parentship>
+</parentship>
+<entityconstraints>
+</entityconstraints>
+
+
+	</graph>
+
+
+	<layout>
+			
+	<node id="node18">
+		<attr name="bounds">
+			<rectangle x="382" y="250" width="237" height="70"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node5">
+		<attr name="bounds">
+			<rectangle x="841" y="160" width="148" height="70"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node8">
+		<attr name="bounds">
+			<rectangle x="362" y="36" width="90" height="77"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node4">
+		<attr name="bounds">
+			<rectangle x="823" y="246" width="148" height="70"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node13">
+		<attr name="bounds">
+			<rectangle x="47" y="65" width="148" height="70"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node9">
+		<attr name="bounds">
+			<rectangle x="38" y="0" width="130" height="36"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node0">
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+		<attr name="bounds">
+			<rectangle x="667" y="127" width="73" height="15"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node6">
+		<attr name="bounds">
+			<rectangle x="792" y="30" width="148" height="70"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node3">
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+		<attr name="bounds">
+			<rectangle x="691" y="215" width="55" height="15"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node11">
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+		<attr name="bounds">
+			<rectangle x="469" y="127" width="84" height="15"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node12">
+		<attr name="bounds">
+			<rectangle x="282" y="163" width="73" height="36"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node17">
+		<attr name="bounds">
+			<rectangle x="210" y="140" width="56" height="15"></rectangle>		</attr>
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+
+
+	</node>
+			
+	<node id="node2">
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+		<attr name="bounds">
+			<rectangle x="317" y="131" width="79" height="15"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node1">
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+		<attr name="bounds">
+			<rectangle x="699" y="179" width="56" height="15"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node16">
+		<attr name="bounds">
+			<rectangle x="374" y="219" width="55" height="15"></rectangle>		</attr>
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+
+
+	</node>
+			
+	<node id="node14">
+		<attr name="bounds">
+			<rectangle x="207" y="214" width="73" height="15"></rectangle>		</attr>
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+
+
+	</node>
+			
+	<node id="node7">
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+		<attr name="bounds">
+			<rectangle x="247" y="41" width="36" height="15"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node15">
+		<attr name="bounds">
+			<rectangle x="57" y="244" width="148" height="70"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node10">
+		<attr name="bounds">
+			<rectangle x="571" y="163" width="43" height="36"></rectangle>		</attr>
+
+
+	</node>
+	</layout>
+</gxl> </model>
+ <model id="EU Entry process  regulation" type="ingenias.editor.models.NormDiagramModelJGraph">
+<object id="EU Entry process  regulation" type="ingenias.editor.entities.NormDiagramDataEntity">
+<mapproperties>
+<key id="Description"></key>
+<key id="_view_type">INGENIAS</key>
+</mapproperties>
+</object>
+  <path>
+    <package id="Project"/>
+   </path>
+<gxl>
+
+	<graph>
+			
+	<node id="RAP1" nid="node3" type="RAP">
+		<attr name="bounds">
+			<rectangle x="65" y="154" width="148" height="70"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="Article1836" nid="node1" type="Norm">
+		<attr name="bounds">
+			<rectangle x="104" y="46" width="79" height="36"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="RAP0" nid="node0" type="RAP">
+		<attr name="bounds">
+			<rectangle x="460" y="32" width="148" height="70"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="1" nid="node5" type="Directive">
+		<attr name="bounds">
+			<rectangle x="293" y="58" width="56" height="15"></rectangle>		</attr>
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+
+
+	<connected id="node1">
+
+
+
+
+		<attr name="labelposition">
+			<point x="500.0" y="-20.0"></point>
+		</attr>
+
+
+
+
+
+
+
+	</connected>
+	<connected id="node0">
+
+
+
+
+
+		<attr name="labelposition">
+			<point x="500.0" y="-20.0"></point>
+		</attr>
+
+
+
+
+
+
+
+	</connected>
+	</node>
+			
+	<node id="RAP2" nid="node2" type="RAP">
+		<attr name="bounds">
+			<rectangle x="380" y="165" width="245" height="70"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="3" nid="node6" type="Deadline">
+		<attr name="bounds">
+			<rectangle x="254" y="109" width="55" height="15"></rectangle>		</attr>
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+
+
+	<connected id="node1">
+
+
+
+
+		<attr name="labelposition">
+			<point x="500.0" y="-20.0"></point>
+		</attr>
+
+
+
+
+
+
+
+	</connected>
+	<connected id="node2">
+
+
+
+
+
+		<attr name="labelposition">
+			<point x="500.0" y="-20.0"></point>
+		</attr>
+
+
+
+
+
+
+
+	</connected>
+	</node>
+			
+	<node id="2" nid="node4" type="Precondition">
+		<attr name="bounds">
+			<rectangle x="105" y="111" width="73" height="15"></rectangle>		</attr>
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+
+
+	<connected id="node1">
+
+
+
+
+		<attr name="labelposition">
+			<point x="500.0" y="-20.0"></point>
+		</attr>
+
+
+
+
+
+
+
+	</connected>
+	<connected id="node3">
+
+
+
+
+
+		<attr name="labelposition">
+			<point x="500.0" y="-20.0"></point>
+		</attr>
+
+
+
+
+
+
+
+	</connected>
+	</node><parentship>
+</parentship>
+<entityconstraints>
+</entityconstraints>
+
+
+	</graph>
+
+
+	<layout>
+			
+	<node id="node3">
+		<attr name="bounds">
+			<rectangle x="65" y="154" width="148" height="70"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node1">
+		<attr name="bounds">
+			<rectangle x="104" y="46" width="79" height="36"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node0">
+		<attr name="bounds">
+			<rectangle x="460" y="32" width="148" height="70"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node5">
+		<attr name="bounds">
+			<rectangle x="293" y="58" width="56" height="15"></rectangle>		</attr>
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+
+
+	</node>
+			
+	<node id="node2">
+		<attr name="bounds">
+			<rectangle x="380" y="165" width="245" height="70"></rectangle>		</attr>
+
+
+	</node>
+			
+	<node id="node6">
+		<attr name="bounds">
+			<rectangle x="254" y="109" width="55" height="15"></rectangle>		</attr>
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+
+
+	</node>
+			
+	<node id="node4">
+		<attr name="bounds">
+			<rectangle x="105" y="111" width="73" height="15"></rectangle>		</attr>
+		<attr name="view">
+			<string>ingenias</string>
+		</attr>
+
+
+
+	</node>
+	</layout>
+</gxl> </model>
+</models>
+</project>

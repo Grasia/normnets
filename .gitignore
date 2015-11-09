@@ -1,0 +1,9 @@
+target
+build
+gen
+bin
+.gradle
+.idea
+.settings
+*.swp
+

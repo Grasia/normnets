@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>nl.tud.tbm.normnets</groupId>
+    <artifactId>normnets</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>normnets</name>
+    <description>A norm nomdeling language plus transformations to CPN</description>
+    <url>https://grasia.fdi.ucm.es/aide</url>    
+    <licenses>
+        <license>
+            <name>The GPL V3</name>
+            <url>http://www.gnu.org/copyleft/gpl.html</url>
+            <distribution />
+        </license>
+    </licenses>
+    <scm>
+        <connection>scm:git:git://github.com/GRASIA/sample-android-devices.git</connection>
+        <developerConnection>scm:git:git@github.com:GRASIA/sample-android-devices.git</developerConnection>
+        <url>https://github.com/Grasia/sample-android-devices</url>		
+    </scm>
+    <developers>
+         <developer>
+      <id>jie</id>
+      <name>Jie Jiang</name>
+      <email>jie.jiang@tudelft.nl</email>
+    </developer>
+     <developer>
+      <id>huib</id>
+      <name>Huib Aldewereld</name>
+      <email>h.m.aldewereld@tudelft.nl</email>
+    </developer>
+    <developer>
+      <id>escalope</id>
+      <name>Jorge Gomez-Sanz</name>
+      <email>jjgomez@fdi.ucm.es</email>
+    </developer>
+    </developers>
+
+ <profiles>
+        <profile>
+            <id>release-sign-artifacts</id>
+            <activation>
+                <property>
+                    <name>performRelease</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+    
+    
+    <properties>
+        <vendor>GRASIA Research Group</vendor>
+        <developername>Pablo Campillo-Sanchez</developername>
+        <developeremail>pabcampi@ucm.es</developeremail>
+	<sociaalml.version>1.0.5</sociaalml.version>
+	<phat.version>1.0.7</phat.version>
+	
+    </properties>
+   	
+    <modules>
+        <module>normnetsed</module>
+        <module>transformation</module>
+    </modules>
+    
+   
+
+    
+</project>
