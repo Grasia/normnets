@@ -33,6 +33,7 @@ import ingenias.generator.browser.GraphEntity;
 import ingenias.generator.browser.GraphRelationship;
 import ingenias.generator.browser.GraphRole;
 
+import org.codehaus.plexus.util.StringOutputStream;
 import org.cpntools.accesscpn.model.Arc;
 import org.cpntools.accesscpn.model.HLAnnotation;
 import org.cpntools.accesscpn.model.HLDeclaration;
@@ -134,12 +135,18 @@ public class NormnetsToCPNTransformation {
 			if (args.length==2){
 				String outputfile=args[1];
 				DOMGenerator.export(cpn, new FileOutputStream(outputfile));
+				StringOutputStream sos=new StringOutputStream();
+				DOMGenerator.export(cpn, sos);
+				String generatedContent=sos.toString();
+				String ncontent=fixGeneratedSpec(generatedContent);
+				FileOutputStream fos=new FileOutputStream(outputfile);
+				fos.write(ncontent.getBytes());
+				fos.close();
 				String textFile = outputfile.replace(".cpn",		
 								".txt");// FIXME volatile! only works if user
 										// selects/uses the default .cpn
 										// extension!
-						
-
+					
 				FileWriter writer = new FileWriter(textFile);
 				for (String output : nn.colorDeclarations)
 					writer.write(output + "\n");// Check if we need the
@@ -154,6 +161,40 @@ public class NormnetsToCPNTransformation {
 			e.printStackTrace();
 		};
 
+	}
+
+	private static String fixGeneratedSpec(String generatedContent) {
+		String instanceIDMark="instance id=\"";
+		String generatedInstanceID=generatedContent.substring(
+				generatedContent.indexOf(instanceIDMark)+instanceIDMark.length(),
+				generatedContent.indexOf("\"", generatedContent.indexOf(instanceIDMark)+instanceIDMark.length()+1));
+		String newbinder=" <binders>\n"+
+				"      <cpnbinder id=\"ID2222\"\n"+
+				"                 x=\"257\"\n"+
+				"                 y=\"122\"\n"+
+				"                 width=\"600\"\n"+
+				"                 height=\"400\">\n"+
+				"        <sheets>\n"+
+				"          <cpnsheet id=\"ID2215\"\n"+
+				"                    panx=\"-6.000000\"\n"+
+				"                    pany=\"-5.000000\"\n"+
+				"                    zoom=\"1.000000\"\n"+
+				"                    instance=\""+generatedInstanceID+"\">\n"+
+				"            <zorder>\n"+
+				"              <position value=\"0\"/>\n"+
+				"            </zorder>\n"+
+				"          </cpnsheet>\n"+
+				"        </sheets>\n"+
+				"        <zorder>\n"+
+				"          <position value=\"0\"/>\n"+
+				"        </zorder>\n"+
+				"      </cpnbinder>\n"+
+				"    </binders>\n";
+		String fixedContent=
+				generatedContent.substring(0,generatedContent.indexOf("</options>")+"</options>".length())+
+				newbinder+generatedContent.substring(generatedContent.indexOf("</options>")+"</options>".length()+1, generatedContent.length());
+		return fixedContent;
+		
 	}
 
 	public PetriNet transform(GraphEntity normNet) throws IOException, NullEntity, NotFound {
