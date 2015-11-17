@@ -98,7 +98,7 @@ public class NormnetsToCPNTransformation {
 	// List to store the color declarations
 	private ArrayList<String> colorDeclarations = new ArrayList<String>();
 
-	
+
 	public static void main(String args[]) throws UnknowFormat, DamagedFormat, CannotLoad, NotInitialised, IOException, NullEntity, NotFound {
 
 		Log.initInstance(new PrintWriter(System.out), new PrintWriter(System.err));
@@ -138,15 +138,15 @@ public class NormnetsToCPNTransformation {
 				StringOutputStream sos=new StringOutputStream();
 				DOMGenerator.export(cpn, sos);
 				String generatedContent=sos.toString();
-				String ncontent=fixGeneratedSpec(generatedContent);
+				String ncontent=fixGeneratedSpec(generatedContent, nn.colorDeclarations);
 				FileOutputStream fos=new FileOutputStream(outputfile);
 				fos.write(ncontent.getBytes());
 				fos.close();
 				String textFile = outputfile.replace(".cpn",		
-								".txt");// FIXME volatile! only works if user
-										// selects/uses the default .cpn
-										// extension!
-					
+						".txt");// FIXME volatile! only works if user
+				// selects/uses the default .cpn
+				// extension!
+
 				FileWriter writer = new FileWriter(textFile);
 				for (String output : nn.colorDeclarations)
 					writer.write(output + "\n");// Check if we need the
@@ -163,11 +163,12 @@ public class NormnetsToCPNTransformation {
 
 	}
 
-	private static String fixGeneratedSpec(String generatedContent) {
+	private static String fixGeneratedSpec(String generatedContent, ArrayList<String> colorDeclarations2) {
 		String instanceIDMark="instance id=\"";
 		String generatedInstanceID=generatedContent.substring(
 				generatedContent.indexOf(instanceIDMark)+instanceIDMark.length(),
 				generatedContent.indexOf("\"", generatedContent.indexOf(instanceIDMark)+instanceIDMark.length()+1));
+
 		String newbinder=" <binders>\n"+
 				"      <cpnbinder id=\"ID2222\"\n"+
 				"                 x=\"257\"\n"+
@@ -190,11 +191,53 @@ public class NormnetsToCPNTransformation {
 				"        </zorder>\n"+
 				"      </cpnbinder>\n"+
 				"    </binders>\n";
+		
+		int idCounter=0;
+		for (String colorDeclaration:colorDeclarations2){
+			Vector<String[]> vars=getVarNames(colorDeclaration);
+			String color=getColor(colorDeclaration);
+			String unionDeclaration="<union>";
+			for (String[] var:vars){
+				unionDeclaration=unionDeclaration+"<unionfield><id>"+var[0]+"</id><type><id>"+var[1]+"</id></type></unionfield>\n";				
+			}
+			unionDeclaration=unionDeclaration+"</union>\n";
+			unionDeclaration=unionDeclaration+"<layout>"+colorDeclaration+"</layout>";
+			String affectedPiece=generatedContent.substring(0,generatedContent.indexOf(color));
+			int startingColorDeclaration=affectedPiece.lastIndexOf("</color>")+"</color>".length();
+			generatedContent=generatedContent.substring(0,startingColorDeclaration)+
+					"<color id=\"whatever"+idCounter+"\">\n"+
+					"<id>"+color+"</id>\n"+					
+					unionDeclaration+"\n"+
+					"</color>\n"+
+					generatedContent.substring(startingColorDeclaration+1, generatedContent.length());
+			idCounter++;
+		}
+
 		String fixedContent=
 				generatedContent.substring(0,generatedContent.indexOf("</options>")+"</options>".length())+
 				newbinder+generatedContent.substring(generatedContent.indexOf("</options>")+"</options>".length()+1, generatedContent.length());
 		return fixedContent;
-		
+
+	}
+
+	private static String getColor(String colorDeclaration) {
+		String[] parts = colorDeclaration.split(" ");
+		return  parts[1];
+	}
+
+	private static Vector<String[]> getVarNames(String colorDeclaration) {
+		String[] parts = colorDeclaration.split(" ");
+		Vector<String[]> result=new Vector<String[]>();
+		int index=4;
+		while (index<parts.length){
+			String name=parts[index].substring(0,parts[index].length()-1);
+			String type=parts[index+1].substring(0,parts[index+1].length());
+			if (type.endsWith(";"))
+				type=type.substring(0,type.length()-1);
+			result.add(new String[]{name,type});
+			index=index+3;
+		}
+		return  result;
 	}
 
 	public PetriNet transform(GraphEntity normNet) throws IOException, NullEntity, NotFound {
@@ -243,7 +286,7 @@ public class NormnetsToCPNTransformation {
 		// call different functions according to the type of the formula
 		if (formula.getEntity().getClass().equals(RAPAnd.class))
 			return createFormulaAndCPN(normID, formula, page);
-		
+
 		if (formula.getEntity().getClass().equals(RAPOr.class))
 			return createFormulaOrCPN(normID, formula, page);
 		if (formula.getEntity().getClass().equals(RAPBefore.class))
@@ -257,7 +300,7 @@ public class NormnetsToCPNTransformation {
 			Page page) throws NullEntity, NotFound {
 		assert andrap.getEntity().getClass().equals(RAPAnd.class);
 		Pattern rapandpt = new Pattern();
-		
+
 		GraphEntity left = Utils.getRelatedElements(andrap, LeftFormula.class, LeftFormulatargetRole.class)[0];
 		GraphEntity right = Utils.getRelatedElements(andrap, RightFormula.class,RightFormulatargetRole.class)[0];
 
@@ -288,7 +331,7 @@ public class NormnetsToCPNTransformation {
 					.contentEquals(Colors.getcolors().get(i).getText())||
 					("U" + rightPattern.getLastPlaces().get(0).getSort().getText()
 							+ leftPattern.getLastPlaces().get(0).getSort().getText())
-					.contentEquals(Colors.getcolors().get(i).getText()))
+							.contentEquals(Colors.getcolors().get(i).getText()))
 				break;
 		}
 		System.out.println("existing or not:" + i);
@@ -335,14 +378,14 @@ public class NormnetsToCPNTransformation {
 
 	private Pattern createFormulaOrCPN(String normID, GraphEntity orrap, Page page) throws NullEntity, NotFound {
 		assert orrap.getEntity().getClass().equals(RAPOr.class);
-		
-		
+
+
 		GraphEntity left = Utils.getRelatedElements(orrap, LeftFormula.class, LeftFormulatargetRole.class)[0];
 		GraphEntity right = Utils.getRelatedElements(orrap, RightFormula.class,RightFormulatargetRole.class)[0];
-		
+
 
 		Pattern raporpt = new Pattern();
-		
+
 		Pattern leftPattern = createFormulaCPN(normID, left, page);
 		Pattern rightPattern = createFormulaCPN(normID, right, page);
 
@@ -371,7 +414,7 @@ public class NormnetsToCPNTransformation {
 					.contentEquals(Colors.getcolors().get(i).getText())
 					||("U" + rightPattern.getLastPlaces().get(0).getSort().getText()
 							+ leftPattern.getLastPlaces().get(0).getSort().getText())
-					.contentEquals(Colors.getcolors().get(i).getText()))
+							.contentEquals(Colors.getcolors().get(i).getText()))
 				break;
 		}
 
@@ -434,11 +477,11 @@ public class NormnetsToCPNTransformation {
 	private Pattern createFormulaBeforeCPN(String normID, GraphEntity beforerap,
 			Page page) throws NullEntity, NotFound {
 		assert beforerap.getEntity().getClass().equals(RAPBefore.class);
-		
-		
+
+
 		GraphEntity left = Utils.getRelatedElements(beforerap, LeftFormula.class, LeftFormulatargetRole.class)[0];
 		GraphEntity right = Utils.getRelatedElements(beforerap, RightFormula.class,RightFormulatargetRole.class)[0];
-		
+
 		Pattern rapbeforept = new Pattern();
 
 
@@ -465,15 +508,15 @@ public class NormnetsToCPNTransformation {
 	}
 
 	private Pattern createRapCPN(String normID, GraphEntity rap, Page page) throws NullEntity, NotFound {
-	assert rap.getEntity().getClass().equals(RAP.class);
-		
-		
+		assert rap.getEntity().getClass().equals(RAP.class);
+
+
 
 		Pattern rappt = new Pattern();
-		
+
 		GraphEntity role=rap.getAttributeByName("Role").getEntityValue();
 		GraphEntity action=rap.getAttributeByName("Action").getEntityValue();
-		
+
 		// create two places
 		Place inputplace = createPlace("i" + normID + rap.getID(), Colors
 				.getcolorbyName(role.getID()), page);
@@ -507,7 +550,7 @@ public class NormnetsToCPNTransformation {
 		assert cnorm.getEntity().getClass().equals(Norm.class);
 		// create three formulas for precondition, deadline and target
 		Pattern normPt = new Pattern();
-		
+
 		GraphEntity targ = Utils.getRelatedElements(cnorm, Directive.class,DirectivetargetRole.class)[0];
 		Pattern target = createFormulaCPN("T" + cnorm.getID(), targ, page);
 
@@ -537,9 +580,9 @@ public class NormnetsToCPNTransformation {
 				.getSourceArc().get(0).getHlinscription());
 
 		// Treat Deontic type
-		
+
 		String deontictype=cnorm.getAttributeByName("DeonticType").getSimpleValue();
-		
+
 		if (deontictype.equalsIgnoreCase("Obliged")) {
 			target.getLastPlaces().get(0).setName(buildName("C"+cnorm.getID()));
 			deadline.getLastPlaces().get(0).setName(buildName("V"+cnorm.getID()));
@@ -650,11 +693,11 @@ public class NormnetsToCPNTransformation {
 		Pattern rightPattern = createNormNet(right, page);
 		// create three transitions
 		Transition combination1 = createTransition("autoN" + normAND.getID()
-		+ "1", page);
+				+ "1", page);
 		Transition combination2 = createTransition("autoN" + normAND.getID()
-		+ "2", page);
+				+ "2", page);
 		Transition combination3 = createTransition("autoN" + normAND.getID()
-		+ "3", page);
+				+ "3", page);
 		// add the connections for AND between Norms
 		Arc fromC1 = createArc(leftPattern.getLastPlaces().get(0),
 				combination1, page);
@@ -720,11 +763,11 @@ public class NormnetsToCPNTransformation {
 
 		// create three transitions
 		Transition combination1 = createTransition("autoN" + normOR.getID()
-		+ "1", page);
+				+ "1", page);
 		Transition combination2 = createTransition("autoN" + normOR.getID()
-		+ "2", page);
+				+ "2", page);
 		Transition combination3 = createTransition("autoN" + normOR.getID()
-		+ "3", page);
+				+ "3", page);
 		// add the connections for OR between Norms
 		Arc fromC1 = createArc(leftPattern.getLastPlaces().get(0),
 				combination1, page);
@@ -790,13 +833,13 @@ public class NormnetsToCPNTransformation {
 
 		// create three transitions
 		Transition C1 = createTransition("autoN" + normOE.getID()
-		+ "1", page);
+				+ "1", page);
 		Transition V1 = createTransition("autoN" + normOE.getID()
-		+ "2", page);
+				+ "2", page);
 		Transition C2 = createTransition("autoN" + normOE.getID()
-		+ "3", page);
+				+ "3", page);
 		Transition V2 = createTransition("autoN" + normOE.getID()
-		+ "4", page);
+				+ "4", page);
 		// add the connections for OE between Norms
 		Arc fromC11 = createArc(leftPattern.getLastPlaces().get(0),
 				C1, page);
@@ -1023,7 +1066,7 @@ public class NormnetsToCPNTransformation {
 		HashSet<GraphEntity> roles=new HashSet<GraphEntity>();
 		for (GraphEntity role:roleEntities){
 			try {
-System.err.println(role.getAttributeByName("Role").getEntityValue());
+				System.err.println(role.getAttributeByName("Role").getEntityValue());
 				roles.add(role.getAttributeByName("Role").getEntityValue());
 			} catch (NullEntity | NotFound e) {
 				e.printStackTrace();
